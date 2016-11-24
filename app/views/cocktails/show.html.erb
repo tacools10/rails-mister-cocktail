@@ -1,11 +1,10 @@
 
 <div class="container text-center">
-  <ul style="list-style: none">
-    <li> <%= @cocktail.name %> </li>
-  </ul>
+
+    <h1> <%= @cocktail.name %> </h1>
 
   <h2>Doses</h2>
-  <ul style="list-style: none">
+  <ul class="text-center" style="list-style: none; list-style-position: outside">
     <% @cocktail.doses.each do |dose| %>
     <li> ID: <%= dose.id %> </li>
     <li> Description: <%= dose.description %> </li>
@@ -16,11 +15,11 @@
 
 <p> <%= link_to "Add a new cocktail", new_cocktail_path(@cocktail), class: "btn btn-primary" %> </p>
 
-<p> <%= link_to "Show all cocktails", cocktails_path %> </p>
+<p> <%= link_to "Show all cocktails", cocktails_path, class: "btn btn-primary" %> </p>
 
-<p> <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %> </p>
+<p> <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %> </p>
 
-<p> <%= link_to "Delete a dose", cocktail_dose_path(@cocktail), method: :delete %> </p>
+<p> <%= link_to "Delete a dose", cocktail_dose_path(@cocktail), method: :delete, class: "btn btn-primary" %> </p>
 
 
 </div>
